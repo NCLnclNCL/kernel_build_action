@@ -28,15 +28,19 @@ jobs:
     - name: Build Kernel
       uses: ./
       with:
-          kernel-url: https://github.com/AcmeUI-Devices/android_kernel_xiaomi_cas
+          kernel-url: https://github.com/NCLnclNCL/android_kernel_xiaomi_vince-3.18
           kernel-dir: msm-4.19
-          kernel-branch: taffy
-          config: cas_defconfig
+          kernel-branch: vince-oreo-mr1
+          config: vince-perf_defconfig
           arch: arm64
-          aosp-gcc: true
+          aosp-gcc: false
           aosp-clang: true
+          other-gcc64-url: https://github.com/gcc-mirror/gcc
+          other-gcc64-branch: master
           ksu: true
-          ksu-version: main
+          ksu-other: true
+          ksu-url: https://github.com/5ec1cff/KernelSU
+          ksu-version: next
           android-version: 12
           aosp-clang-version: r383902
           disable-lto: true
