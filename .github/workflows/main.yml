@@ -34,7 +34,7 @@ jobs:
           config: vince-perf_defconfig
           arch: arm64
           aosp-gcc: false
-          aosp-clang: true
+          aosp-clang: false
           other-gcc64-url: https://github.com/gcc-mirror/gcc
           other-gcc64-branch: master
           ksu: true
